@@ -1,0 +1,98 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-black;
+}
+
+.heading-primary{
+    color: $color-black;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+    
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 600;
+        font-family: 'Overpass', sans-serif;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+        @include respond(tab-port) {
+            font-size: 3.5rem;
+        }
+    }
+
+    &--sub {
+        display: block;
+        font-family: 'Overpass Mono', monospace;
+        font-size: 2rem;
+        font-weight: 300;
+
+        animation: moveInRight 1s ease-out;
+
+        @include respond(tab-port) {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.heading-secondary {
+    
+    text-transform: uppercase;
+    display: block;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 4rem;
+    font-weight: 400;
+
+    @include respond(tab-port) {
+        font-size: 3rem;
+    }
+
+    &--white {
+        color: $color-white;
+    }
+
+    &--black {
+        color: $color-black;
+    }
+
+    &--gradient {
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    
+}
+
+.heading-third {
+    @include clearfix;
+    text-transform: uppercase;
+    display: inline-block;
+    font-family: 'Overpass', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+
+}
+
+.heading-fourth {
+    @include clearfix;
+    font-size: $default-font-size;
+    font-family: 'Overpass Mono', monospace;
+    font-weight: 300; 
+    text-decoration: underline;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+
+    &--white {
+        color: $color-white;
+    }
+    &--black {
+        color: $color-black;
+    }
+}

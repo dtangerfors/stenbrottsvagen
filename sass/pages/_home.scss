@@ -1,0 +1,112 @@
+.section-about {
+    height: 50rem;
+    position: relative;
+    background-color: $color-grey-light-1;
+
+    @include respond(tab-port) {
+        min-height: 50vh;
+    }
+
+    &__content {
+        @include center-center;
+
+        @include respond(tab-port) {
+            width: 90%;
+        }
+    }
+
+    &__weather {
+        position: absolute;
+        top: 80%;
+        pointer-events: none;
+        cursor: default;
+    }
+}
+
+
+.section-book {
+    @include clearfix;
+    background-image: url(../img/book-img.jpg);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    padding: 5rem;
+
+    @include respond(tab-port) {
+        padding: 0;
+        padding-bottom: 5rem;
+        background-attachment: scroll;
+    }
+
+    &__title {
+        float: left;
+        width: 65%;
+
+        @include respond(tab-port) {
+            width: 100%;
+            padding: 3rem;
+        }
+    }
+
+    &__form {
+        float: right;
+
+        @include respond(tab-port) {
+            width: 100%;
+            padding: 0 3rem;
+        }
+    }
+}
+
+.section-bookings {
+    background-color: $color-grey-light-1;
+    min-height: 50rem;
+    padding-bottom: 5rem;
+
+    &__title {
+        text-align: center;
+        padding: 4rem 0;
+    }
+
+    .row {
+        margin-bottom: 5rem;
+    }
+    
+}
+
+.section-info {
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    padding-bottom: 5rem;
+
+    @include respond(tab-port) {
+        background-attachment: scroll;
+
+    }
+
+    &__title {
+        text-align: center;
+        padding: 4rem 0;
+    }
+
+    .row {
+        position: relative;
+    }
+    
+}
+
+.section-guestbook {
+    background-color: $color-grey-light-1;
+    min-height: 50rem;
+    padding-bottom: 5rem;
+
+    &__title {
+        text-align: center;
+        padding: 4rem 0;
+    }
+
+    
+    
+}

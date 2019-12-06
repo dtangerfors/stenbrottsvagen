@@ -1,0 +1,99 @@
+.guestbook{
+
+    &__form {
+        @include shadow-1;
+        width: 70%;
+        padding: 2rem;
+        border-radius: 3px;
+        background-color: $color-white;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        &--input {
+            width: 100%;
+            background-color: $color-grey-light-1;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+
+            font-size: 1.4rem;
+            font-family: inherit;
+            background-color: inherit;
+            color: inherit;
+            
+            border: none;
+            display: block;
+            transition: all .5s;
+            border-bottom: .2rem solid $color-white;
+
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+
+            &:focus {
+                outline: none;
+                border-bottom: .2rem solid $color-grey-dark-2;
+            }
+    
+            &:valid {
+                outline: none;
+                border-bottom: .2rem solid $color-primary;
+            }
+    
+            &:focus:invalid {
+                border-bottom: .2rem solid $color-grey-dark-2;
+            }
+    
+            &::-webkit-input-placeholder {
+                color: inherit;
+            }
+        }
+
+        &--inputComment {
+            width: 100%;
+        }
+    }
+
+    &__header {
+        font-family: "Overpass", sans-serif;
+        font-size: 2rem;
+    }
+
+    &__commentSection {
+        height: 50rem;
+        overflow: scroll;
+
+        @include respond(tab-port) {
+            height: auto;
+            overflow: unset;
+        }
+    }
+
+    &__comment {
+        @include shadow-1;
+        width: 93%;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 3px;
+        border-left: .5rem solid $color-primary;
+        background-color: $color-white;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        &:not(last-child){margin-bottom: 2rem;}
+
+        &--name {
+            font-size: 2rem;
+            font-family: "Overpass", sans-serif;
+            padding-bottom: 1rem;
+        }
+
+        &--post {
+            font-size: 1.4rem;
+        }
+    }
+}

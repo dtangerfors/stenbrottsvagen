@@ -1,0 +1,8 @@
+*.txt
+
+node_modules
+
+booking-test.php
+booking-test-2.php
+
+*.xml

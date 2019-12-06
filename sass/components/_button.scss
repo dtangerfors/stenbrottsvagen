@@ -1,0 +1,42 @@
+.btn {
+    &,
+    &:link,
+    :visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem;
+        width: 100%;
+        display: inline-block;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.5rem;
+        height: 5rem;
+        border-radius: 3px;
+
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+
+        // Change for the <button> element
+        border: none;
+        cursor: pointer;
+    }
+
+    &--book {
+            background-color: $color-white;
+            color: $color-grey-dark;
+            transition: all .5s;
+    }
+
+    #bookForm:valid &--book {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+
+    #guestBook:valid &--book {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+
+}

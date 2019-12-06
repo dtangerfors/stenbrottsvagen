@@ -1,0 +1,107 @@
+.card {
+    @include shadow-1;
+    background-color: $color-white;
+    border-radius: 3px;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+
+    @include respond(tab-port) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__paragraph {
+
+        @include respond(tab-port) {
+            padding: 1rem 0; 
+            min-width: 50%;
+
+            &:first-child {
+                width: 50%;
+            }
+        }
+
+
+        &:not(:first-child) {
+            padding-left: 3rem;
+
+            @include respond(tab-port) {
+                padding-left: 0rem;
+            }
+        }
+
+        &:not(:last-child) {
+            padding-right: 5rem;
+            border-right: 1px solid $color-grey-light-2;
+
+            @include respond(tab-port) {
+                padding-right: 5rem;
+                border-right: none;
+                border-bottom: 1px solid $color-grey-light-2;
+            }
+        }
+
+        &--main {
+            font-size: $font-size-m;
+            display: block;
+        }
+    
+        &--sub {
+            font-size: $font-size-sm;
+            color: $color-primary-dark;
+            display: block;
+        }
+    }
+}
+
+.text-cut {
+
+    @include respond(tab-port) {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.card-info {
+    @include shadow-1;
+    background-color: $color-white;
+    border-radius: 3px;
+    padding: 2rem 3rem;
+    min-height: 35rem;
+
+    &__heading {
+        text-align: center;
+    }
+
+    table {
+        font-size: $default-font-size;
+        text-align: left;
+        width: 100%;
+
+        td {
+            padding: .5rem 2rem .5rem 0;
+        }
+
+        th {
+            font-family: 'Overpass Mono', monospace;
+            font-weight: 300; 
+            text-decoration: underline;
+        }
+
+        .tr--info {
+            font-size: $font-size-sm;
+            padding: 0;
+        
+            &:first-child {
+                padding-top: 2rem;
+            }
+        }
+
+    }
+}
+

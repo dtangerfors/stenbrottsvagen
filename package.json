@@ -1,0 +1,14 @@
+{
+  "name": "stenbrottsvagen_3",
+  "version": "1.0.0",
+  "description": "Landing page for our booking portal",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass-sbv": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Daniel Tängerfors",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

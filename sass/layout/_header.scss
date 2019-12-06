@@ -1,0 +1,22 @@
+.header {
+    height: 80vh;
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+
+
+    @include respond(tab-port) {
+        height: 60vh;
+        background-attachment: scroll;
+    }
+
+    &__text-box {
+        @include center-center;
+        text-align: center;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+}

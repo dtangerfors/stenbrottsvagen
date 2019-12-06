@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Overpass:600" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        
+        <title>Stenbrottsvägen 3 – Bokning och nyttig info</title>
+        
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">Stenbrottsvägen 3</span>
+                    <span class="heading-primary--sub">Bokning och nyttig info för vårat släkthus</span>
+                </h1>
+
+                
+            </div>
+        </header>
+
+        <main>
+            <section class="section-about">
+                <div class="section-about__content">
+                    <p class="paragraph u-margin-bottom-big">Välkommen till vår portal på webben för Stenbrottsvägen 3. Här kan du lägga in datum du besöker huset, finna nödvändig information och annat som kan vara bra att veta! </p>
+                    <a class="section-about__weather weatherwidget-io" href="https://forecast7.com/sv/57d8619d05/farosund/" data-label_1="FÅRÖSUND" data-font="Open Sans" data-icons="Climacons Animated" data-mode="Current" data-days="3" data-theme="original" data-basecolor="" data-textcolor="#777" data-cloudfill="#dfdede">FÅRÖSUND VÄDER</a>
+                    <script>
+                            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                            </script>
+                </div>
+            </section>
+
+            <section class="section-book">
+                        <div class="section-book__title">
+                            <h2 class="heading-secondary">Boka vistelse vid huset</h2>
+                            <p class="paragraph">Skriv in bokande person, antal gäster, incheckning, utcheckning och vilka rum/stugor du kommer använda. Allmäna utrymmen i köket huset inte med.</p>
+                        </div>
+
+                        <div class="section-book__form">
+                            <form action="" method="POST" class="form" id="bookForm">
+                                <div class="row">
+                                    <div class="form__col--34">
+                                    <input type="text" class="form__input" id="name" placeholder="Person som bokar" required>
+                                    <label for="name" class="form__label">Person som bokar</label>
+                                    </div>    
+                                    <div class="form__col--14">    
+                                    <select name="guests" class="form__select" required>
+                                        <option value="" disabled selected>Gäster &#8964;</option>
+                                        <option value="1">1 gäster</option>
+                                        <option value="2">2 gäster</option>
+                                        <option value="3">3 gäster</option>
+                                        <option value="4">4 gäster</option>
+                                        <option value="5">5 gäster</option>
+                                        <option value="6">6 gäster</option>
+                                        <option value="7">7 gäster</option>
+                                        <option value="8">8 gäster</option>
+                                        <option value="9">9 gäster</option>
+                                        <option value="10">10 gäster</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form__col--12">
+                                        <input type="text" class="form__input" placeholder="Ankomst (ååmmdd)" required>
+                                        <label class="form__label">Ankomst (ååmmdd)</label>
+                                    </div> 
+                                    <div class="form__col--12">
+                                        <input type="text" class="form__input" placeholder="Avresa (ååmmdd)" required>
+                                        <label class="form__label">Avresa (åååå-mm-dd)</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form__col--14-2">
+                                        <label class="form__check-label">Bungetorp
+                                            <input type="checkbox" class="form__check-input" name="rum">
+                                            <span class="form__check--checkmark"></span>
+                                        </label><br>
+                                        <label class="form__check-label">Kammaren
+                                            <input type="checkbox" class="form__check-input" name="rum">
+                                            <span class="form__check--checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form__col--14-2">
+                                        <label class="form__check-label">Kerstins
+                                            <input type="checkbox" class="form__check-input" name="rum">
+                                            <span class="form__check--checkmark"></span>
+                                        </label><br>
+                                        <label class="form__check-label">Sivs
+                                            <input type="checkbox" class="form__check-input" name="rum">
+                                            <span class="form__check--checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form__col--14-2">
+                                        <label class="form__check-label">Stensbo
+                                            <input type="checkbox" class="form__check-input" name="rum">
+                                            <span class="form__check--checkmark"></span>
+                                        </label><br>
+                                        <label class="form__check-label">Thomas
+                                            <input type="checkbox" class="form__check-input" name="rum">
+                                            <span class="form__check--checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="form__col--14-2">
+                                        <label class="form__check-label">Vårat
+                                            <input type="checkbox" class="form__check-input" name="rum">
+                                            <span class="form__check--checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form__col--1">
+                                        <input type="submit" name="Submit" class="btn btn--book" value="Lägg in bokning">
+                                    </div>
+                                </div>
+                                                
+                                        
+                                                
+                                             
+                                                
+                                            
+                                               
+                                        
+                                        
+                                                    
+                                         
+                            </form>
+                        </div>
+            </section>
+            
+            <section class="section-bookings">
+
+                <div class="section-bookings__title">
+                    <h2 class="heading-secondary heading-secondary--gradient">Inlagda bokningar</h2>
+                </div>
+
+                <div class="row">
+                    <div class="card">
+                        <p class="card__paragraph">
+                            <span class="card__paragraph--sub">Bokning gjord av</span>
+                            <span class="card__paragraph--main text-cut">Anders Segerblad Nyström</span>
+                        </p>
+
+                        <p class="card__paragraph">
+                            <span class="card__paragraph--sub">Antal gäster</span>
+                            <span class="card__paragraph--main">3 gäster</span>
+                        </p>
+
+                        <p class="card__paragraph">
+                            <span class="card__paragraph--sub">Incheckning</span>
+                            <span class="card__paragraph--main">190802</span>
+                        </p>
+
+                        <p class="card__paragraph">
+                            <span class="card__paragraph--sub">Utcheckning</span>
+                            <span class="card__paragraph--main">190807</span>
+                        </p>
+
+                        <p class="card__paragraph">
+                            <span class="card__paragraph--sub">Rum/stugor vi kommer använda</span>
+                            <span class="card__paragraph--main">190802</span>
+                        </p>
+                    </div>
+                </div>
+               
+
+            </section>
+
+            <section class="section-info">
+                <div class="section-info__title">
+                    <h2 class="heading-secondary heading-secondary--black">Bra att veta</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="card-info">
+                            <div class="card-info__heading">
+                                <h3 class="heading-third u-margin-bottom-small">Hyra</h3>
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>Antal veckor</th>
+                                    <th>Vuxen</th>
+                                    <th>Barn</th>
+                                </tr>
+                                <tr>
+                                    <td>En vecka</td>
+                                    <td>300 kr</td>
+                                    <td>100 kr</td>
+                                </tr>
+                                <tr>
+                                    <td>Upp till två veckor</td>
+                                    <td>400 kr</td>
+                                    <td>150 kr</td>
+                                </tr>
+                                <tr>
+                                    <td>Två veckor</td>
+                                    <td>500 kr</td>
+                                    <td>200 kr</td>
+                                </tr>
+
+                                <tr class="tr--info">
+                                    <td colspan="3">Uthyrning för vecka 3500:-</td>
+                                </tr>
+
+                                <tr class="tr--info">
+                                    <td colspan="3">Pengarna insättes på konto: 5385 015 163-8, senast samma år.</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card-info">
+                            <div class="card-info__heading">
+                                <h3 class="heading-third u-margin-bottom-small">Sophämtning</h3>
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>Hämtning</th>
+                                    <th>Period</th>
+                                    <th>Tisdag</th>
+                                </tr>
+                                <tr>
+                                    <td>Brännbart</td>
+                                    <td>14-dag</td>
+                                    <td>Udda v</td>
+                                </tr>
+                                <tr>
+                                    <td>Kompost</td>
+                                    <td>14-dag</td>
+                                    <td>Jämn v</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card-info">
+                            <div class="card-info__heading">
+                                 <h3 class="heading-third u-margin-bottom-small">Övrig info</h3>
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>Hämtning</th>
+                                    <th>Period</th>
+                                    <th>Tisdag</th>
+                                </tr>
+                                <tr>
+                                    <td>Brännbart</td>
+                                    <td>14-dag</td>
+                                    <td>Udda v</td>
+                                </tr>
+                                <tr>
+                                    <td>Kompost</td>
+                                    <td>14-dag</td>
+                                    <td>Jämn v</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-guestbook">
+                <div class="section-guestbook__title">
+                    <h2 class="heading-secondary heading-secondary--gradient">Gästbok</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <div class="guestbook__form">
+                            <div class="guestbook__header">Skriv inlägg</div>
+
+                            <form action="" method="POST" id="guestBook">
+                                <input type="text" name="Name" class="guestbook__form--input" placeholder="Namn" required>
+                                <textarea name="Comment" class="guestbook__form--input" rows="5" placeholder="Skriv ditt inlägg här" required></textarea>
+                                
+                                <input type="submit" name="SubmitGuestPost" value="Posta inlägg" class="btn btn--book">
+                        </div>
+                    </div>
+                    <div class="col-1-of-2 guestbook__commentSection">
+                       <div class="guestbook__comment">
+                           <div class="guestbook__comment--name">Daniel skriver:</div>
+                           <div class="guestbook__comment--post">Här är min kommentar</div>
+                       </div>
+                       <div class="guestbook__comment">
+                        <div class="guestbook__comment--name">Daniel skriver:</div>
+                        <div class="guestbook__comment--post">Här är min kommentar</div>
+                    </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
