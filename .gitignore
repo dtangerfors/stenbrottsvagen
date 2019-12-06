@@ -1,6 +1,7 @@
 *.txt
 
 node_modules
+sass
 
 booking-test.php
 booking-test-2.php
